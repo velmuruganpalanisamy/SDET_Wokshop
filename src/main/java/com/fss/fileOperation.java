@@ -1,25 +1,29 @@
 package com.fss;
 
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 
 public class fileOperation {
    
-    public static void mian(String arg[])
-    {
+    public static void main(String[] args) {
         try {
-            File file = new File();
-           // f.createNewFile();
+            // Specify the file name and path
+            File file = new File("example.txt");  // Create a file called example.txt
+            
+            // If the file does not exist, create it
+            if (!file.exists()) {
+                file.createNewFile();
+            }
 
-            FileWriter file = new FileWriter(f);
-            file.append("This file contains password");
-            file.close();
+            // Create a FileWriter to write to the file
+            FileWriter writer = new FileWriter(file);
+            writer.append("This file contains password");
+            writer.close();  // Close the file after writing
 
-        } catch (Exception e) 
-        {
-            System.out.println("File not created ");
+            System.out.println("File created and data written successfully.");
+        } catch (Exception e) {
+            System.out.println("File not created: " + e.getMessage());
         }
     }
-    
 }
+
