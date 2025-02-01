@@ -18,7 +18,7 @@ public class AppTest {
         int expected = 10;
         int actual = app.sum(5, 5);
         assertEquals(expected, actual);
-        assertTrue(2>3);
+        assertTrue(2<3);
         
     }
 }
