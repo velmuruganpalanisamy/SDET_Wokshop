@@ -9,7 +9,7 @@ public class fileOperation {
     public static void mian(String arg[])
     {
         try {
-            File file = new File()
+            File file = new File();
            // f.createNewFile();
 
             FileWriter file = new FileWriter(f);
